@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trello</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Trello Board</h1>
+
+            <div>
+                <button id="addSectionModalBtn">Add Section</button
+                ><button id="addTaskModalBtn">Add Task</button>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modalContent">
+                    <span id="close">&times;</span>
+
+                    <form id="addTaskForm">
+                        <h1>Add Task</h1>
+                        <div>
+                            <label for="taskTitle">Title</label
+                            ><input
+                                type="text"
+                                id="taskTitle"
+                                placeholder="enter the title"
+                            />
+                        </div>
+                        <div>
+                            <label for="desc">Description</label>
+                            <textarea
+                                name=""
+                                id="desc"
+                                cols="30"
+                                rows="5"
+                                placeholder="enter the description"
+                            ></textarea>
+                        </div>
+                        <div class="actionBtns">
+                            <button id="addTaskBtn">Add</button>
+                            <button id="cancelBtn">Cancel</button>
+                        </div>
+                    </form>
+
+                    <form id="addSectionForm">
+                        <h1>Add Section</h1>
+                        <div>
+                            <label for="sectionName">Name</label
+                            ><input
+                                type="text"
+                                id="sectionName"
+                                placeholder="enter the name"
+                            />
+                        </div>
+                        <div>
+                            <label for="sectionColor">Color</label>
+                            <input
+                                type="color"
+                                name=""
+                                id="sectionColor"
+                                value="#ffffff"
+                            />
+                        </div>
+                        <div class="actionBtns">
+                            <button id="addSectionBtn">Add</button>
+                            <button id="cancelBtn">Cancel</button>
+                        </div>
+                    </form>
+
+                    <form id="firstAddSectionForm">
+                        <h1>Please, add a section at first.</h1>
+                        <div class="actionBtns">
+                            <button id="okBtn">OK</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="board"></div>
+        </div>
+    </body>
+    <script src="index.js" type="module"></script>
+</html>
